@@ -5,5 +5,8 @@ numpy
 pandas
 matplotlib
 seaborn
-graphviz
 Cython
+scipy
+scikit-image
+imgaug
+pycocotools

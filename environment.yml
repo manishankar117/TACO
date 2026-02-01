@@ -1,0 +1,12 @@
+name: taco
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - tensorflow=1.15.0
+  - keras=2.0.8
+  - graphviz
+  - pip
+  - pip:
+    - -r requirements.txt
