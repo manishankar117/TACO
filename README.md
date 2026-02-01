@@ -51,10 +51,30 @@ To install the required python packages simply type
 ```
 pip3 install -r requirements.txt
 ```
-Additionaly, to use ``demo.pynb``, you will also need [coco python api](https://github.com/cocodataset/cocoapi). You can get this using
+
+Additionally, to use ``demo.ipynb`` and the detector, you will need:
 ```
-pip3 install git+https://github.com/philferriere/cocoapi.git#subdirectory=PythonAPI
+pip3 install pycocotools
 ```
+
+**Windows users:** If the above fails with a Visual C++ error, either:
+1. Install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) (select "Desktop development with C++"), or
+2. Use conda: `conda install -c conda-forge pycocotools`
+
+For the detector notebooks, you will also need:
+```
+pip3 install tensorflow==1.15.0 keras==2.0.8 scipy scikit-image imgaug
+```
+
+**Note:** The pre-trained weights require TensorFlow 1.15.0 and Keras 2.0.8. Modern versions are incompatible.
+
+**Note:** If using conda, install `graphviz` when creating the environment (not via pip).
+
+### Using Pre-trained Weights
+
+When using released weights, match the class_map to the weights:
+- `taco_10_*.zip` → use `--class_map=./taco_config/map_10.csv`
+- `taco_3_*.zip` → use `--class_map=./taco_config/map_3.csv`
 
 ### Download
 
